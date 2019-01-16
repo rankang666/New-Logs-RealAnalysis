@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>新闻实时可视化分析平台</title>
+    <style>
+        html,body, #main {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        #main{
+            width: 1000px;
+            background: #fff;
+        }
+        div{
+            margin-top: 200px;
+            text-align: center;
+            font-size: x-large;
+        }
+    </style>
+    <script type="text/javascript">
+        onload=function () {
+            setInterval(go, 1000);
+        };
+        var x = 3; //利用了全局变量来执行
+        function go() {
+            x--;
+            if(x > 0){
+                document.getElementById("seconds").innerHTML=x;//每次设置的x的值都不一样了。
+            }else {
+                window.location.href="show.html";
+            }
+        }
+    </script>
+</head>
+<body background="static/imgs/rk.jpg" style="background-repeat: no-repeat;background-attachment: fixed; background-size: 100% 100%;">
+    <div>
+        (^_^) 欢迎访问rk实时可视化分析大屏系统(^_^)<br/>
+        系统即将会在&nbsp;&nbsp;<font id="seconds" size="7" color="blue">3</font>&nbsp;秒&nbsp;&nbsp;后自动跳转到大屏页面^<>^
+    </div>
+</body>
+</html>

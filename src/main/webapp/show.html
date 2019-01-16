@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>新闻可视化实时大屏</title>
+        <script src="static/js/echarts.min.js"></script>
+        <script src="static/js/jquery-1.11.3.min.js"></script>
+
+        <script>
+            function totalTopics() {
+                $.getJSON("/news_logs/servlet/ShowServlet?method=getAllTopics", null, function (jsonObj) {
+                    document.getElementById("id_p_total_topics").innerHTML = "全网已曝光的话题数：" + jsonObj.totalTopics
+                } );
+            }
+
+            function topicsTop() {
+                $.getJSON("/news_logs/servlet/ShowServlet?method=newsTopN", null, function (jsonObj) {
+                    var datadate = jsonObj.date
+                    var topics = jsonObj.topics
+                    var topicsTimes = jsonObj.topicsTimes
+
+                    //基于准备好的dom,初始化echarts实例
+                    var myChart = echarts.init(document.getElementById("id_topics_top"));
+                    //指定图表的配置项和数据
+                    var option = {
+                        title: {
+                            text: '热门新闻话题榜',
+                            subtext: '热门新闻Top10'
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        },
+                        legend: {
+                            data: datadate
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        xAxis: {
+                            type: 'value',
+                            boundaryGap: [0, 0.01]
+                        },
+                        yAxis: {
+                            type: 'category',
+                            data: topics
+                        },
+                        series: [
+                            {
+                            name: datadate,
+                            type: 'bar',
+                            data: topicsTimes
+                            }
+                        ]
+                    };
+                    //使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+
+                });
+
+            }
+
+            function hourTopics() {
+                $.getJSON("/news_logs/servlet/ShowServlet?method=hourTopics", null, function (jsonObj) {
+                    var hourList = jsonObj.hourList;
+                    var topicNumList = jsonObj.topicNumList;
+                    var myChart = echarts.init(document.getElementById("id_hour_topics"));
+                    //指定图表的配置项和数据
+                    var option = {
+                        title: {
+                            text: '新闻话题浏览量变化趋势'
+                        },
+                        xAxis:{
+                            type: 'category',
+                            data: hourList
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [{
+                            data: topicNumList,
+                            type: 'line'
+                        }]
+                    };
+                    //使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                })
+            }
+            $(function () {
+                //开启一个定时任务,表示每隔多长时间(单位秒)请求一次
+                setInterval(totalTopics, 1000);
+                setInterval(topicsTop, 2000);
+                setInterval(hourTopics, 3000);
+            })
+        </script>
+
+    </head>
+    <body>
+        <div id="id_total_topics" style="background: yellowgreen; width: 200px; margin-left: 500px;">
+            <p id="id_p_total_topics">
+                全网已曝光的话题数：0
+            </p>
+        </div>
+        <div id="id_topics_top" style=" width: 400px; height: 500px; float: left;">热门话题榜</div>
+        <div id="id_hour_topics" style=" width: 600px;height: 500px;float: right;">话题榜变化曲线图</div>
+    </body>
+</html>

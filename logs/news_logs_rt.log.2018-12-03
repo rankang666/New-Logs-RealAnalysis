@@ -1,0 +1,909 @@
+2018-12-03 10:26:37 [main] [org.apache.spark.SparkContext] [INFO] - Running Spark version 2.3.1
+2018-12-03 10:26:37 [main] [org.apache.hadoop.util.Shell] [ERROR] - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:382)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:397)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:390)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)
+	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:611)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:273)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:261)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:806)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:776)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:649)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2467)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2493)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:933)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:924)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:924)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:27)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 10:26:37 [main] [org.apache.spark.SparkContext] [ERROR] - Error initializing SparkContext.
+org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:367)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2493)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:933)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:924)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:924)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:27)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 10:26:37 [main] [org.apache.spark.util.Utils] [ERROR] - Uncaught exception in thread main
+java.lang.NullPointerException
+	at org.apache.spark.SparkContext.org$apache$spark$SparkContext$$postApplicationEnd(SparkContext.scala:2389)
+	at org.apache.spark.SparkContext$$anonfun$stop$1.apply$mcV$sp(SparkContext.scala:1904)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1360)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1903)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:579)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2493)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:933)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:924)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:924)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:27)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 10:26:37 [main] [org.apache.spark.SparkContext] [INFO] - Successfully stopped SparkContext
+2018-12-03 10:28:30 [main] [org.apache.spark.SparkContext] [INFO] - Running Spark version 2.3.1
+2018-12-03 10:28:30 [main] [org.apache.hadoop.util.Shell] [ERROR] - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:382)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:397)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:390)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)
+	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:611)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:273)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:261)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:806)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:776)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:649)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2467)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2493)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:933)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:924)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:924)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:27)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 10:28:31 [main] [org.apache.spark.SparkContext] [INFO] - Submitted application: RealTimeNewsTopN$
+2018-12-03 10:28:31 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls to: Administrator
+2018-12-03 10:28:31 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls to: Administrator
+2018-12-03 10:28:31 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls groups to: 
+2018-12-03 10:28:31 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls groups to: 
+2018-12-03 10:28:31 [main] [org.apache.spark.SecurityManager] [INFO] - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Administrator); groups with view permissions: Set(); users  with modify permissions: Set(Administrator); groups with modify permissions: Set()
+2018-12-03 10:28:32 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'sparkDriver' on port 3111.
+2018-12-03 10:28:32 [main] [org.apache.spark.SparkEnv] [INFO] - Registering MapOutputTracker
+2018-12-03 10:28:32 [main] [org.apache.spark.SparkEnv] [INFO] - Registering BlockManagerMaster
+2018-12-03 10:28:32 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2018-12-03 10:28:32 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - BlockManagerMasterEndpoint up
+2018-12-03 10:28:32 [main] [org.apache.spark.storage.DiskBlockManager] [INFO] - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-634abbed-eaeb-41f6-a424-8f78b189eb17
+2018-12-03 10:28:32 [main] [org.apache.spark.storage.memory.MemoryStore] [INFO] - MemoryStore started with capacity 873.0 MB
+2018-12-03 10:28:32 [main] [org.apache.spark.SparkEnv] [INFO] - Registering OutputCommitCoordinator
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.util.log] [INFO] - Logging initialized @6140ms
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.Server] [INFO] - jetty-9.3.z-SNAPSHOT
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.Server] [INFO] - Started @6246ms
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.AbstractConnector] [INFO] - Started ServerConnector@6f57d6b8{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-12-03 10:28:32 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'SparkUI' on port 4040.
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@52500920{/jobs,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@191ae03f{/jobs/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@9635fa{/jobs/job,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@2d10e0b1{/jobs/job/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1c98290c{/stages,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@172ca72b{/stages/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5bda80bf{/stages/stage,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5e8f9e2d{/stages/stage/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@51df223b{/stages/pool,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@fd46303{/stages/pool/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60d8c0dc{/storage,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4204541c{/storage/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@6a62689d{/storage/rdd,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4602c2a9{/storage/rdd/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60fa3495{/environment,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@3e2822{/environment/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@79e18e38{/executors,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@29a60c27{/executors/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1849db1a{/executors/threadDump,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@69c79f09{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1ca25c47{/static,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@35fe2125{/,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@94f6bfb{/api,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1255b1d1{/jobs/job/kill,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@464649c{/stages/stage/kill,null,AVAILABLE,@Spark}
+2018-12-03 10:28:32 [main] [org.apache.spark.ui.SparkUI] [INFO] - Bound SparkUI to 0.0.0.0, and started at http://192.168.121.1:4040
+2018-12-03 10:28:33 [main] [org.apache.spark.executor.Executor] [INFO] - Starting executor ID driver on host localhost
+2018-12-03 10:28:33 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 3124.
+2018-12-03 10:28:33 [main] [org.apache.spark.network.netty.NettyBlockTransferService] [INFO] - Server created on 192.168.121.1:3124
+2018-12-03 10:28:33 [main] [org.apache.spark.storage.BlockManager] [INFO] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2018-12-03 10:28:33 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registering BlockManager BlockManagerId(driver, 192.168.121.1, 3124, None)
+2018-12-03 10:28:33 [dispatcher-event-loop-0] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Registering block manager 192.168.121.1:3124 with 873.0 MB RAM, BlockManagerId(driver, 192.168.121.1, 3124, None)
+2018-12-03 10:28:33 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registered BlockManager BlockManagerId(driver, 192.168.121.1, 3124, None)
+2018-12-03 10:28:33 [main] [org.apache.spark.storage.BlockManager] [INFO] - Initialized BlockManager: BlockManagerId(driver, 192.168.121.1, 3124, None)
+2018-12-03 10:28:33 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@d4602a{/metrics/json,null,AVAILABLE,@Spark}
+2018-12-03 10:28:34 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding enable.auto.commit to false for executor
+2018-12-03 10:28:34 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding auto.offset.reset to none for executor
+2018-12-03 10:28:34 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [ERROR] - group.id is null, you should probably set it
+2018-12-03 10:28:34 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding executor group.id to spark-executor-null
+2018-12-03 10:28:34 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding receive.buffer.bytes to 65536 see KAFKA-3135
+2018-12-03 10:28:34 [main] [org.spark_project.jetty.server.AbstractConnector] [INFO] - Stopped Spark@6f57d6b8{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-12-03 10:28:34 [main] [org.apache.spark.ui.SparkUI] [INFO] - Stopped Spark web UI at http://192.168.121.1:4040
+2018-12-03 10:28:34 [dispatcher-event-loop-0] [org.apache.spark.MapOutputTrackerMasterEndpoint] [INFO] - MapOutputTrackerMasterEndpoint stopped!
+2018-12-03 10:28:34 [main] [org.apache.spark.storage.memory.MemoryStore] [INFO] - MemoryStore cleared
+2018-12-03 10:28:34 [main] [org.apache.spark.storage.BlockManager] [INFO] - BlockManager stopped
+2018-12-03 10:28:34 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - BlockManagerMaster stopped
+2018-12-03 10:28:34 [dispatcher-event-loop-1] [org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint] [INFO] - OutputCommitCoordinator stopped!
+2018-12-03 10:28:34 [main] [org.apache.spark.SparkContext] [INFO] - Successfully stopped SparkContext
+2018-12-03 10:28:34 [Thread-1] [org.apache.spark.util.ShutdownHookManager] [INFO] - Shutdown hook called
+2018-12-03 10:28:34 [Thread-1] [org.apache.spark.util.ShutdownHookManager] [INFO] - Deleting directory C:\Users\Administrator\AppData\Local\Temp\spark-46e0e1ec-bd88-4613-b350-a469290800f0
+2018-12-03 10:33:25 [main] [org.apache.spark.SparkContext] [INFO] - Running Spark version 2.3.1
+2018-12-03 10:33:26 [main] [org.apache.hadoop.util.Shell] [ERROR] - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:382)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:397)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:390)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)
+	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:611)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:273)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:261)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:806)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:776)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:649)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2467)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2493)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:933)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:924)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:924)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:27)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 10:33:26 [main] [org.apache.spark.SparkContext] [INFO] - Submitted application: RealTimeNewsTopN$
+2018-12-03 10:33:26 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls to: Administrator
+2018-12-03 10:33:26 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls to: Administrator
+2018-12-03 10:33:26 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls groups to: 
+2018-12-03 10:33:26 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls groups to: 
+2018-12-03 10:33:26 [main] [org.apache.spark.SecurityManager] [INFO] - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Administrator); groups with view permissions: Set(); users  with modify permissions: Set(Administrator); groups with modify permissions: Set()
+2018-12-03 10:33:27 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'sparkDriver' on port 3282.
+2018-12-03 10:33:27 [main] [org.apache.spark.SparkEnv] [INFO] - Registering MapOutputTracker
+2018-12-03 10:33:27 [main] [org.apache.spark.SparkEnv] [INFO] - Registering BlockManagerMaster
+2018-12-03 10:33:27 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2018-12-03 10:33:27 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - BlockManagerMasterEndpoint up
+2018-12-03 10:33:27 [main] [org.apache.spark.storage.DiskBlockManager] [INFO] - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-e177d0ab-2ae4-45c7-a17b-4dfbd1e97233
+2018-12-03 10:33:27 [main] [org.apache.spark.storage.memory.MemoryStore] [INFO] - MemoryStore started with capacity 873.0 MB
+2018-12-03 10:33:27 [main] [org.apache.spark.SparkEnv] [INFO] - Registering OutputCommitCoordinator
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.util.log] [INFO] - Logging initialized @6340ms
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.Server] [INFO] - jetty-9.3.z-SNAPSHOT
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.Server] [INFO] - Started @6447ms
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.AbstractConnector] [INFO] - Started ServerConnector@2c1b9e4b{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-12-03 10:33:28 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'SparkUI' on port 4040.
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@52500920{/jobs,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@191ae03f{/jobs/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@9635fa{/jobs/job,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@2d10e0b1{/jobs/job/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1c98290c{/stages,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@172ca72b{/stages/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5bda80bf{/stages/stage,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5e8f9e2d{/stages/stage/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@51df223b{/stages/pool,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@fd46303{/stages/pool/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60d8c0dc{/storage,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4204541c{/storage/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@6a62689d{/storage/rdd,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4602c2a9{/storage/rdd/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60fa3495{/environment,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@3e2822{/environment/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@79e18e38{/executors,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@29a60c27{/executors/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1849db1a{/executors/threadDump,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@69c79f09{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1ca25c47{/static,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@35fe2125{/,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@94f6bfb{/api,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1255b1d1{/jobs/job/kill,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@464649c{/stages/stage/kill,null,AVAILABLE,@Spark}
+2018-12-03 10:33:28 [main] [org.apache.spark.ui.SparkUI] [INFO] - Bound SparkUI to 0.0.0.0, and started at http://192.168.121.1:4040
+2018-12-03 10:33:28 [main] [org.apache.spark.executor.Executor] [INFO] - Starting executor ID driver on host localhost
+2018-12-03 10:33:28 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 3299.
+2018-12-03 10:33:28 [main] [org.apache.spark.network.netty.NettyBlockTransferService] [INFO] - Server created on 192.168.121.1:3299
+2018-12-03 10:33:28 [main] [org.apache.spark.storage.BlockManager] [INFO] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2018-12-03 10:33:28 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registering BlockManager BlockManagerId(driver, 192.168.121.1, 3299, None)
+2018-12-03 10:33:28 [dispatcher-event-loop-1] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Registering block manager 192.168.121.1:3299 with 873.0 MB RAM, BlockManagerId(driver, 192.168.121.1, 3299, None)
+2018-12-03 10:33:28 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registered BlockManager BlockManagerId(driver, 192.168.121.1, 3299, None)
+2018-12-03 10:33:28 [main] [org.apache.spark.storage.BlockManager] [INFO] - Initialized BlockManager: BlockManagerId(driver, 192.168.121.1, 3299, None)
+2018-12-03 10:33:28 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@d4602a{/metrics/json,null,AVAILABLE,@Spark}
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding enable.auto.commit to false for executor
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding auto.offset.reset to none for executor
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [ERROR] - group.id is null, you should probably set it
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding executor group.id to spark-executor-null
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding receive.buffer.bytes to 65536 see KAFKA-3135
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Checkpoint interval = null
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Initialized and validated org.apache.spark.streaming.kafka010.DirectKafkaInputDStream@6289b02c
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Checkpoint interval = null
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@72f1959a
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Checkpoint interval = null
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 10:33:29 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@822a190
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.StreamingContext] [ERROR] - Error starting the context, marking it as stopped
+org.apache.kafka.common.config.ConfigException: Missing required configuration "value.deserializer" which has no default value.
+	at org.apache.kafka.common.config.ConfigDef.parse(ConfigDef.java:421)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:55)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:62)
+	at org.apache.kafka.clients.consumer.ConsumerConfig.<init>(ConsumerConfig.java:376)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:557)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:540)
+	at org.apache.spark.streaming.kafka010.Subscribe.onStart(ConsumerStrategy.scala:84)
+	at org.apache.spark.streaming.kafka010.DirectKafkaInputDStream.consumer(DirectKafkaInputDStream.scala:70)
+	at org.apache.spark.streaming.kafka010.DirectKafkaInputDStream.start(DirectKafkaInputDStream.scala:240)
+	at org.apache.spark.streaming.DStreamGraph$$anonfun$start$7.apply(DStreamGraph.scala:54)
+	at org.apache.spark.streaming.DStreamGraph$$anonfun$start$7.apply(DStreamGraph.scala:54)
+	at scala.collection.parallel.mutable.ParArray$ParArrayIterator.foreach_quick(ParArray.scala:143)
+	at scala.collection.parallel.mutable.ParArray$ParArrayIterator.foreach(ParArray.scala:136)
+	at scala.collection.parallel.ParIterableLike$Foreach.leaf(ParIterableLike.scala:972)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:49)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:51)
+	at scala.collection.parallel.ParIterableLike$Foreach.tryLeaf(ParIterableLike.scala:969)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:152)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:443)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+	at ... run in separate thread using org.apache.spark.util.ThreadUtils ... ()
+	at org.apache.spark.streaming.StreamingContext.liftedTree1$1(StreamingContext.scala:578)
+	at org.apache.spark.streaming.StreamingContext.start(StreamingContext.scala:572)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:39)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.scheduler.ReceiverTracker] [INFO] - ReceiverTracker stopped
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.scheduler.JobGenerator] [INFO] - Stopping JobGenerator immediately
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.util.RecurringTimer] [INFO] - Stopped timer for JobGenerator after time -1
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.scheduler.JobGenerator] [INFO] - Stopped JobGenerator
+2018-12-03 10:33:29 [main] [org.apache.spark.streaming.scheduler.JobScheduler] [INFO] - Stopped JobScheduler
+2018-12-03 10:33:29 [Thread-1] [org.apache.spark.SparkContext] [INFO] - Invoking stop() from shutdown hook
+2018-12-03 10:33:29 [Thread-1] [org.spark_project.jetty.server.AbstractConnector] [INFO] - Stopped Spark@2c1b9e4b{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-12-03 10:33:29 [Thread-1] [org.apache.spark.ui.SparkUI] [INFO] - Stopped Spark web UI at http://192.168.121.1:4040
+2018-12-03 10:33:29 [dispatcher-event-loop-1] [org.apache.spark.MapOutputTrackerMasterEndpoint] [INFO] - MapOutputTrackerMasterEndpoint stopped!
+2018-12-03 10:33:29 [Thread-1] [org.apache.spark.storage.memory.MemoryStore] [INFO] - MemoryStore cleared
+2018-12-03 10:33:29 [Thread-1] [org.apache.spark.storage.BlockManager] [INFO] - BlockManager stopped
+2018-12-03 10:33:29 [Thread-1] [org.apache.spark.storage.BlockManagerMaster] [INFO] - BlockManagerMaster stopped
+2018-12-03 10:33:29 [dispatcher-event-loop-0] [org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint] [INFO] - OutputCommitCoordinator stopped!
+2018-12-03 10:33:29 [Thread-1] [org.apache.spark.SparkContext] [INFO] - Successfully stopped SparkContext
+2018-12-03 10:33:29 [Thread-1] [org.apache.spark.util.ShutdownHookManager] [INFO] - Shutdown hook called
+2018-12-03 10:33:29 [Thread-1] [org.apache.spark.util.ShutdownHookManager] [INFO] - Deleting directory C:\Users\Administrator\AppData\Local\Temp\spark-c48b1784-cf7d-4205-814f-b98d3cfca167
+2018-12-03 10:53:35 [main] [org.apache.spark.SparkContext] [INFO] - Running Spark version 2.3.1
+2018-12-03 10:53:36 [main] [org.apache.hadoop.util.Shell] [ERROR] - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:382)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:397)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:390)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)
+	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:611)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:273)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:261)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:806)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:776)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:649)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2467)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2493)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:933)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:924)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:924)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:27)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 10:53:36 [main] [org.apache.spark.SparkContext] [INFO] - Submitted application: RealTimeNewsTopN$
+2018-12-03 10:53:36 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls to: Administrator
+2018-12-03 10:53:36 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls to: Administrator
+2018-12-03 10:53:36 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls groups to: 
+2018-12-03 10:53:36 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls groups to: 
+2018-12-03 10:53:36 [main] [org.apache.spark.SecurityManager] [INFO] - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Administrator); groups with view permissions: Set(); users  with modify permissions: Set(Administrator); groups with modify permissions: Set()
+2018-12-03 10:53:37 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'sparkDriver' on port 4354.
+2018-12-03 10:53:38 [main] [org.apache.spark.SparkEnv] [INFO] - Registering MapOutputTracker
+2018-12-03 10:53:38 [main] [org.apache.spark.SparkEnv] [INFO] - Registering BlockManagerMaster
+2018-12-03 10:53:38 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2018-12-03 10:53:38 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - BlockManagerMasterEndpoint up
+2018-12-03 10:53:38 [main] [org.apache.spark.storage.DiskBlockManager] [INFO] - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-3deb514c-2b1f-4de5-b764-634a49d76d67
+2018-12-03 10:53:38 [main] [org.apache.spark.storage.memory.MemoryStore] [INFO] - MemoryStore started with capacity 873.0 MB
+2018-12-03 10:53:38 [main] [org.apache.spark.SparkEnv] [INFO] - Registering OutputCommitCoordinator
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.util.log] [INFO] - Logging initialized @5011ms
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.Server] [INFO] - jetty-9.3.z-SNAPSHOT
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.Server] [INFO] - Started @5137ms
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.AbstractConnector] [INFO] - Started ServerConnector@2249cad8{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-12-03 10:53:38 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'SparkUI' on port 4040.
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@117e0fe5{/jobs,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@9635fa{/jobs/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@53ab0286{/jobs/job,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1c98290c{/jobs/job/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@172ca72b{/stages,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5bda80bf{/stages/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@71e5f61d{/stages/stage,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@51df223b{/stages/stage/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@fd46303{/stages/pool,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60d8c0dc{/stages/pool/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4204541c{/storage,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@6a62689d{/storage/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4602c2a9{/storage/rdd,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60fa3495{/storage/rdd/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@3e2822{/environment,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@79e18e38{/environment/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@29a60c27{/executors,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1849db1a{/executors/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@69c79f09{/executors/threadDump,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1ca25c47{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5fcacc0{/static,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@94f6bfb{/,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@34645867{/api,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@464649c{/jobs/job/kill,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@7c22d4f{/stages/stage/kill,null,AVAILABLE,@Spark}
+2018-12-03 10:53:38 [main] [org.apache.spark.ui.SparkUI] [INFO] - Bound SparkUI to 0.0.0.0, and started at http://RAN:4040
+2018-12-03 10:53:39 [main] [org.apache.spark.executor.Executor] [INFO] - Starting executor ID driver on host localhost
+2018-12-03 10:53:39 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 4367.
+2018-12-03 10:53:39 [main] [org.apache.spark.network.netty.NettyBlockTransferService] [INFO] - Server created on RAN:4367
+2018-12-03 10:53:39 [main] [org.apache.spark.storage.BlockManager] [INFO] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2018-12-03 10:53:39 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registering BlockManager BlockManagerId(driver, RAN, 4367, None)
+2018-12-03 10:53:39 [dispatcher-event-loop-0] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Registering block manager RAN:4367 with 873.0 MB RAM, BlockManagerId(driver, RAN, 4367, None)
+2018-12-03 10:53:39 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registered BlockManager BlockManagerId(driver, RAN, 4367, None)
+2018-12-03 10:53:39 [main] [org.apache.spark.storage.BlockManager] [INFO] - Initialized BlockManager: BlockManagerId(driver, RAN, 4367, None)
+2018-12-03 10:53:39 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@21ae6e73{/metrics/json,null,AVAILABLE,@Spark}
+2018-12-03 10:53:40 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding enable.auto.commit to false for executor
+2018-12-03 10:53:40 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding auto.offset.reset to none for executor
+2018-12-03 10:53:40 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [ERROR] - group.id is null, you should probably set it
+2018-12-03 10:53:40 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding executor group.id to spark-executor-null
+2018-12-03 10:53:40 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding receive.buffer.bytes to 65536 see KAFKA-3135
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Checkpoint interval = null
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Initialized and validated org.apache.spark.streaming.kafka010.DirectKafkaInputDStream@e71df10
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Checkpoint interval = null
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@95c41e1
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Checkpoint interval = null
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 10:53:40 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@627dbeba
+2018-12-03 10:53:40 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.ConsumerConfig] [INFO] - ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [hadoop:19092, hadoop:29092, hadoop:39092]
+	ssl.keystore.type = JKS
+	enable.auto.commit = true
+	sasl.mechanism = GSSAPI
+	interceptor.classes = null
+	exclude.internal.topics = true
+	ssl.truststore.password = null
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	max.poll.records = 2147483647
+	check.crcs = true
+	request.timeout.ms = 40000
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 5000
+	receive.buffer.bytes = 65536
+	ssl.truststore.type = JKS
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	fetch.min.bytes = 1
+	send.buffer.bytes = 131072
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	group.id = 
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.trustmanager.algorithm = PKIX
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	ssl.cipher.suites = null
+	security.protocol = PLAINTEXT
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	auto.offset.reset = latest
+
+2018-12-03 10:53:40 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.ConsumerConfig] [INFO] - ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [hadoop:19092, hadoop:29092, hadoop:39092]
+	ssl.keystore.type = JKS
+	enable.auto.commit = true
+	sasl.mechanism = GSSAPI
+	interceptor.classes = null
+	exclude.internal.topics = true
+	ssl.truststore.password = null
+	client.id = consumer-1
+	ssl.endpoint.identification.algorithm = null
+	max.poll.records = 2147483647
+	check.crcs = true
+	request.timeout.ms = 40000
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 5000
+	receive.buffer.bytes = 65536
+	ssl.truststore.type = JKS
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	fetch.min.bytes = 1
+	send.buffer.bytes = 131072
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	group.id = 
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.trustmanager.algorithm = PKIX
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	ssl.cipher.suites = null
+	security.protocol = PLAINTEXT
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	auto.offset.reset = latest
+
+2018-12-03 10:53:40 [ForkJoinPool-1-worker-5] [org.apache.kafka.common.utils.AppInfoParser] [INFO] - Kafka version : 0.10.0.1
+2018-12-03 10:53:40 [ForkJoinPool-1-worker-5] [org.apache.kafka.common.utils.AppInfoParser] [INFO] - Kafka commitId : a7a17cdec9eaa6c5
+2018-12-03 11:06:03 [main] [org.apache.spark.SparkContext] [INFO] - Running Spark version 2.3.1
+2018-12-03 11:06:04 [main] [org.apache.hadoop.util.Shell] [ERROR] - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:382)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:397)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:390)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)
+	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:611)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:273)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:261)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:806)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:776)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:649)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2467)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2493)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:933)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:924)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:924)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:27)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 11:06:04 [main] [org.apache.spark.SparkContext] [INFO] - Submitted application: RealTimeNewsTopN$
+2018-12-03 11:06:04 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls to: Administrator
+2018-12-03 11:06:04 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls to: Administrator
+2018-12-03 11:06:04 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls groups to: 
+2018-12-03 11:06:04 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls groups to: 
+2018-12-03 11:06:04 [main] [org.apache.spark.SecurityManager] [INFO] - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Administrator); groups with view permissions: Set(); users  with modify permissions: Set(Administrator); groups with modify permissions: Set()
+2018-12-03 11:06:06 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'sparkDriver' on port 5184.
+2018-12-03 11:06:06 [main] [org.apache.spark.SparkEnv] [INFO] - Registering MapOutputTracker
+2018-12-03 11:06:06 [main] [org.apache.spark.SparkEnv] [INFO] - Registering BlockManagerMaster
+2018-12-03 11:06:06 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2018-12-03 11:06:06 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - BlockManagerMasterEndpoint up
+2018-12-03 11:06:06 [main] [org.apache.spark.storage.DiskBlockManager] [INFO] - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-1bcd4533-942b-4836-90d1-af6e5c790823
+2018-12-03 11:06:06 [main] [org.apache.spark.storage.memory.MemoryStore] [INFO] - MemoryStore started with capacity 873.0 MB
+2018-12-03 11:06:06 [main] [org.apache.spark.SparkEnv] [INFO] - Registering OutputCommitCoordinator
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.util.log] [INFO] - Logging initialized @4888ms
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.Server] [INFO] - jetty-9.3.z-SNAPSHOT
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.Server] [INFO] - Started @4994ms
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.AbstractConnector] [INFO] - Started ServerConnector@3ccf213f{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-12-03 11:06:06 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'SparkUI' on port 4040.
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@117e0fe5{/jobs,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@9635fa{/jobs/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@53ab0286{/jobs/job,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1c98290c{/jobs/job/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@172ca72b{/stages,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5bda80bf{/stages/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@71e5f61d{/stages/stage,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@51df223b{/stages/stage/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@fd46303{/stages/pool,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60d8c0dc{/stages/pool/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4204541c{/storage,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@6a62689d{/storage/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4602c2a9{/storage/rdd,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60fa3495{/storage/rdd/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@3e2822{/environment,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@79e18e38{/environment/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@29a60c27{/executors,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1849db1a{/executors/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@69c79f09{/executors/threadDump,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1ca25c47{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5fcacc0{/static,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@94f6bfb{/,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@34645867{/api,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@464649c{/jobs/job/kill,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@7c22d4f{/stages/stage/kill,null,AVAILABLE,@Spark}
+2018-12-03 11:06:06 [main] [org.apache.spark.ui.SparkUI] [INFO] - Bound SparkUI to 0.0.0.0, and started at http://RAN:4040
+2018-12-03 11:06:07 [main] [org.apache.spark.executor.Executor] [INFO] - Starting executor ID driver on host localhost
+2018-12-03 11:06:07 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 5197.
+2018-12-03 11:06:07 [main] [org.apache.spark.network.netty.NettyBlockTransferService] [INFO] - Server created on RAN:5197
+2018-12-03 11:06:07 [main] [org.apache.spark.storage.BlockManager] [INFO] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2018-12-03 11:06:07 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registering BlockManager BlockManagerId(driver, RAN, 5197, None)
+2018-12-03 11:06:07 [dispatcher-event-loop-0] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Registering block manager RAN:5197 with 873.0 MB RAM, BlockManagerId(driver, RAN, 5197, None)
+2018-12-03 11:06:07 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registered BlockManager BlockManagerId(driver, RAN, 5197, None)
+2018-12-03 11:06:07 [main] [org.apache.spark.storage.BlockManager] [INFO] - Initialized BlockManager: BlockManagerId(driver, RAN, 5197, None)
+2018-12-03 11:06:07 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@21ae6e73{/metrics/json,null,AVAILABLE,@Spark}
+2018-12-03 11:06:08 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding enable.auto.commit to false for executor
+2018-12-03 11:06:08 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding auto.offset.reset to none for executor
+2018-12-03 11:06:08 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [ERROR] - group.id is null, you should probably set it
+2018-12-03 11:06:08 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding executor group.id to spark-executor-null
+2018-12-03 11:06:08 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding receive.buffer.bytes to 65536 see KAFKA-3135
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Checkpoint interval = null
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Initialized and validated org.apache.spark.streaming.kafka010.DirectKafkaInputDStream@4f8c3973
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Checkpoint interval = null
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@1fac87ed
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Checkpoint interval = null
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 11:06:08 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@2115e0fa
+2018-12-03 11:06:08 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.ConsumerConfig] [INFO] - ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [hadoop:19092, hadoop:29092, hadoop:39092]
+	ssl.keystore.type = JKS
+	enable.auto.commit = true
+	sasl.mechanism = GSSAPI
+	interceptor.classes = null
+	exclude.internal.topics = true
+	ssl.truststore.password = null
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	max.poll.records = 2147483647
+	check.crcs = true
+	request.timeout.ms = 40000
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 5000
+	receive.buffer.bytes = 65536
+	ssl.truststore.type = JKS
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	fetch.min.bytes = 1
+	send.buffer.bytes = 131072
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	group.id = 
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.trustmanager.algorithm = PKIX
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	ssl.cipher.suites = null
+	security.protocol = PLAINTEXT
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	auto.offset.reset = latest
+
+2018-12-03 11:06:08 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.ConsumerConfig] [INFO] - ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [hadoop:19092, hadoop:29092, hadoop:39092]
+	ssl.keystore.type = JKS
+	enable.auto.commit = true
+	sasl.mechanism = GSSAPI
+	interceptor.classes = null
+	exclude.internal.topics = true
+	ssl.truststore.password = null
+	client.id = consumer-1
+	ssl.endpoint.identification.algorithm = null
+	max.poll.records = 2147483647
+	check.crcs = true
+	request.timeout.ms = 40000
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 5000
+	receive.buffer.bytes = 65536
+	ssl.truststore.type = JKS
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	fetch.min.bytes = 1
+	send.buffer.bytes = 131072
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	group.id = 
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.trustmanager.algorithm = PKIX
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	ssl.cipher.suites = null
+	security.protocol = PLAINTEXT
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	auto.offset.reset = latest
+
+2018-12-03 11:06:08 [ForkJoinPool-1-worker-5] [org.apache.kafka.common.utils.AppInfoParser] [INFO] - Kafka version : 0.10.0.1
+2018-12-03 11:06:08 [ForkJoinPool-1-worker-5] [org.apache.kafka.common.utils.AppInfoParser] [INFO] - Kafka commitId : a7a17cdec9eaa6c5
+2018-12-03 11:06:09 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] [INFO] - Discovered coordinator hadoop01:9092 (id: 2147483646 rack: null) for group .
+2018-12-03 11:06:09 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] [INFO] - Revoking previously assigned partitions [] for group 
+2018-12-03 11:06:09 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] [INFO] - (Re-)joining group 
+2018-12-03 11:06:30 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] [INFO] - Marking the coordinator hadoop01:9092 (id: 2147483646 rack: null) dead for group 
+2018-12-03 12:07:14 [main] [org.apache.spark.SparkContext] [INFO] - Running Spark version 2.3.1
+2018-12-03 12:07:14 [main] [org.apache.hadoop.util.Shell] [ERROR] - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:382)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:397)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:390)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)
+	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:611)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:273)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:261)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:806)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:776)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:649)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2467)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2467)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2493)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:933)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:924)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:924)
+	at rk.news.jobs.RealTimeNewsTopN$.main(RealTimeNewsTopN.scala:27)
+	at rk.news.jobs.RealTimeNewsTopN.main(RealTimeNewsTopN.scala)
+2018-12-03 12:07:15 [main] [org.apache.spark.SparkContext] [INFO] - Submitted application: RealTimeNewsTopN$
+2018-12-03 12:07:15 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls to: Administrator
+2018-12-03 12:07:15 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls to: Administrator
+2018-12-03 12:07:15 [main] [org.apache.spark.SecurityManager] [INFO] - Changing view acls groups to: 
+2018-12-03 12:07:15 [main] [org.apache.spark.SecurityManager] [INFO] - Changing modify acls groups to: 
+2018-12-03 12:07:15 [main] [org.apache.spark.SecurityManager] [INFO] - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Administrator); groups with view permissions: Set(); users  with modify permissions: Set(Administrator); groups with modify permissions: Set()
+2018-12-03 12:07:16 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'sparkDriver' on port 9469.
+2018-12-03 12:07:16 [main] [org.apache.spark.SparkEnv] [INFO] - Registering MapOutputTracker
+2018-12-03 12:07:16 [main] [org.apache.spark.SparkEnv] [INFO] - Registering BlockManagerMaster
+2018-12-03 12:07:16 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2018-12-03 12:07:16 [main] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - BlockManagerMasterEndpoint up
+2018-12-03 12:07:17 [main] [org.apache.spark.storage.DiskBlockManager] [INFO] - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-1bac2541-a765-4f8f-a086-8a24a66083e8
+2018-12-03 12:07:17 [main] [org.apache.spark.storage.memory.MemoryStore] [INFO] - MemoryStore started with capacity 873.0 MB
+2018-12-03 12:07:17 [main] [org.apache.spark.SparkEnv] [INFO] - Registering OutputCommitCoordinator
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.util.log] [INFO] - Logging initialized @5003ms
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.Server] [INFO] - jetty-9.3.z-SNAPSHOT
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.Server] [INFO] - Started @5130ms
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.AbstractConnector] [INFO] - Started ServerConnector@a59208d{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-12-03 12:07:17 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'SparkUI' on port 4040.
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@117e0fe5{/jobs,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@9635fa{/jobs/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@53ab0286{/jobs/job,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1c98290c{/jobs/job/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@172ca72b{/stages,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5bda80bf{/stages/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@71e5f61d{/stages/stage,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@51df223b{/stages/stage/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@fd46303{/stages/pool,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60d8c0dc{/stages/pool/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4204541c{/storage,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@6a62689d{/storage/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@4602c2a9{/storage/rdd,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@60fa3495{/storage/rdd/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@3e2822{/environment,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@79e18e38{/environment/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@29a60c27{/executors,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1849db1a{/executors/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@69c79f09{/executors/threadDump,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@1ca25c47{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@5fcacc0{/static,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@94f6bfb{/,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@34645867{/api,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@464649c{/jobs/job/kill,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@7c22d4f{/stages/stage/kill,null,AVAILABLE,@Spark}
+2018-12-03 12:07:17 [main] [org.apache.spark.ui.SparkUI] [INFO] - Bound SparkUI to 0.0.0.0, and started at http://RAN:4040
+2018-12-03 12:07:17 [main] [org.apache.spark.executor.Executor] [INFO] - Starting executor ID driver on host localhost
+2018-12-03 12:07:17 [main] [org.apache.spark.util.Utils] [INFO] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 9484.
+2018-12-03 12:07:17 [main] [org.apache.spark.network.netty.NettyBlockTransferService] [INFO] - Server created on RAN:9484
+2018-12-03 12:07:17 [main] [org.apache.spark.storage.BlockManager] [INFO] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2018-12-03 12:07:17 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registering BlockManager BlockManagerId(driver, RAN, 9484, None)
+2018-12-03 12:07:17 [dispatcher-event-loop-0] [org.apache.spark.storage.BlockManagerMasterEndpoint] [INFO] - Registering block manager RAN:9484 with 873.0 MB RAM, BlockManagerId(driver, RAN, 9484, None)
+2018-12-03 12:07:17 [main] [org.apache.spark.storage.BlockManagerMaster] [INFO] - Registered BlockManager BlockManagerId(driver, RAN, 9484, None)
+2018-12-03 12:07:17 [main] [org.apache.spark.storage.BlockManager] [INFO] - Initialized BlockManager: BlockManagerId(driver, RAN, 9484, None)
+2018-12-03 12:07:18 [main] [org.spark_project.jetty.server.handler.ContextHandler] [INFO] - Started o.s.j.s.ServletContextHandler@21ae6e73{/metrics/json,null,AVAILABLE,@Spark}
+2018-12-03 12:07:18 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding enable.auto.commit to false for executor
+2018-12-03 12:07:18 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding auto.offset.reset to none for executor
+2018-12-03 12:07:18 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [ERROR] - group.id is null, you should probably set it
+2018-12-03 12:07:18 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding executor group.id to spark-executor-null
+2018-12-03 12:07:18 [main] [org.apache.spark.streaming.kafka010.KafkaUtils] [WARN] - overriding receive.buffer.bytes to 65536 see KAFKA-3135
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Checkpoint interval = null
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.kafka010.DirectKafkaInputDStream] [INFO] - Initialized and validated org.apache.spark.streaming.kafka010.DirectKafkaInputDStream@324f5d90
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Checkpoint interval = null
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.MappedDStream] [INFO] - Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@9bfbea7
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Slide time = 4000 ms
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Storage level = Serialized 1x Replicated
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Checkpoint interval = null
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Remember interval = 4000 ms
+2018-12-03 12:07:18 [streaming-start] [org.apache.spark.streaming.dstream.ForEachDStream] [INFO] - Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@2baa1391
+2018-12-03 12:07:19 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.ConsumerConfig] [INFO] - ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [hadoop:19092, hadoop:29092, hadoop:39092]
+	ssl.keystore.type = JKS
+	enable.auto.commit = true
+	sasl.mechanism = GSSAPI
+	interceptor.classes = null
+	exclude.internal.topics = true
+	ssl.truststore.password = null
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	max.poll.records = 2147483647
+	check.crcs = true
+	request.timeout.ms = 40000
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 5000
+	receive.buffer.bytes = 65536
+	ssl.truststore.type = JKS
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	fetch.min.bytes = 1
+	send.buffer.bytes = 131072
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	group.id = 
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.trustmanager.algorithm = PKIX
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	ssl.cipher.suites = null
+	security.protocol = PLAINTEXT
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	auto.offset.reset = latest
+
+2018-12-03 12:07:19 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.ConsumerConfig] [INFO] - ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [hadoop:19092, hadoop:29092, hadoop:39092]
+	ssl.keystore.type = JKS
+	enable.auto.commit = true
+	sasl.mechanism = GSSAPI
+	interceptor.classes = null
+	exclude.internal.topics = true
+	ssl.truststore.password = null
+	client.id = consumer-1
+	ssl.endpoint.identification.algorithm = null
+	max.poll.records = 2147483647
+	check.crcs = true
+	request.timeout.ms = 40000
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 5000
+	receive.buffer.bytes = 65536
+	ssl.truststore.type = JKS
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	fetch.min.bytes = 1
+	send.buffer.bytes = 131072
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	group.id = 
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.trustmanager.algorithm = PKIX
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	ssl.cipher.suites = null
+	security.protocol = PLAINTEXT
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	auto.offset.reset = latest
+
+2018-12-03 12:07:19 [ForkJoinPool-1-worker-5] [org.apache.kafka.common.utils.AppInfoParser] [INFO] - Kafka version : 0.10.0.1
+2018-12-03 12:07:19 [ForkJoinPool-1-worker-5] [org.apache.kafka.common.utils.AppInfoParser] [INFO] - Kafka commitId : a7a17cdec9eaa6c5
+2018-12-03 12:07:22 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] [INFO] - Discovered coordinator hadoop01:9092 (id: 2147483646 rack: null) for group .
+2018-12-03 12:07:22 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator] [INFO] - Revoking previously assigned partitions [] for group 
+2018-12-03 12:07:22 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] [INFO] - (Re-)joining group 
+2018-12-03 12:07:43 [ForkJoinPool-1-worker-5] [org.apache.kafka.clients.consumer.internals.AbstractCoordinator] [INFO] - Marking the coordinator hadoop01:9092 (id: 2147483646 rack: null) dead for group 
